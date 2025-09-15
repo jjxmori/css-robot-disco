@@ -1,6 +1,9 @@
 .rotate {
     animation: rotate 5s linear infinite;
 }
+.robot-nose:hover {
+    animation: hover 2s linear;
+}
 
 @keyframes rotate {
     0% {
@@ -17,5 +20,10 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+@keyframes hover {
+    50% {
+        transform: rotate(-45deg);
     }
 }
