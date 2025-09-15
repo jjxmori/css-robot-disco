@@ -1,8 +1,16 @@
-.rotate {
+.robot-eye-right {
     animation: rotate 5s linear infinite;
 }
 .robot-nose:hover {
     animation: hover 2s linear;
+}
+
+.robot-ear-right {
+    animation: disappearing-appear 4s linear infinite;
+}
+.hi {
+    animation: name duration timing-function delay iteration-count direction
+        fill-mode;
 }
 
 @keyframes rotate {
@@ -20,6 +28,23 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+@keyframes disappearing-appear {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
     }
 }
 @keyframes hover {
