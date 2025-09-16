@@ -1,12 +1,24 @@
 .robot-eye-right {
     animation: rotate 5s linear infinite;
 }
+.robot-eye-left {
+    animation: changing 5s linear infinite;
+}
 .robot-nose:hover {
     animation: hover 2s linear;
 }
 
 .robot-ear-right {
     animation: disappearing-appear 4s linear infinite;
+}
+.robot-ear-left {
+    animation: change-color 4s linear infinite;
+}
+.robot-hair-style {
+    animation: move-around 3s linear infinite;
+}
+.robot-tooth {
+    animation: teeth-shake 2s linear infinite;
 }
 .hi {
     animation: name duration timing-function delay iteration-count direction
@@ -50,5 +62,87 @@
 @keyframes hover {
     50% {
         transform: rotate(-45deg);
+    }
+}
+@keyframes changing {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+@keyframes move-around {
+    0% {
+        top: -100px;
+        left: 100px;
+    }
+    25% {
+        top: -100px;
+        left: 140px;
+    }
+    50% {
+        top: -110px;
+        left: 180px;
+    }
+    75% {
+        top: -110px;
+        left: 140px;
+    }
+    100% {
+        top: -100px;
+        left: 100px;
+    }
+}
+@keyframes change-color {
+    0% {
+        border-right: 60px solid transparent;
+        border-top: 60px solid #ff0000c1;
+        border-left: 60px solid #ff0000c1;
+        border-bottom: 60px solid #ff0000c1;
+    }
+    25% {
+        border-right: 60px solid transparent;
+        border-top: 60px solid #fbff00c1;
+        border-left: 60px solid #fbff00c1;
+        border-bottom: 60px solid #fbff00c1;
+    }
+    50% {
+        border-right: 60px solid transparent;
+        border-top: 60px solid #00ffe5c1;
+        border-left: 60px solid #00ffe5c1;
+        border-bottom: 60px solid #00ffe5c1;
+    }
+    75% {
+        border-right: 60px solid transparent;
+        border-top: 60px solid #dd00ffc1;
+        border-left: 60px solid #dd00ffc1;
+        border-bottom: 60px solid #dd00ffc1;
+    }
+    100% {
+        border-right: 60px solid transparent;
+        border-top: 60px solid #ff0000c1;
+        border-left: 60px solid #ff0000c1;
+        border-bottom: 60px solid #ff0000c1;
+    }
+}
+@keyframes teeth-shake {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 2px;
+    }
+    50% {
+        top: 4px;
+    }
+    75% {
+        top: 6px;
+    }
+    100% {
+        top: 7px;
     }
 }
